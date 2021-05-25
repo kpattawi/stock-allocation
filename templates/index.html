@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Stock Allocation Tool</title>
+</head>
+<body>
+    <div class="container">
+        <form id="stock-form">
+            <h3>Please add stocks to the portfolio:</h3>
+            <div id="add-stock">
+                <input id="ticker-input" type="text" name="stock" placeholder="Ticker symbol"/>
+                <input id="quantity-input" type="text" name="quantity" placeholder="Number of shares owned">
+                <input type="submit" value="Add stock" class="btn"/>
+            </div>
+        </form>
+        <div id="portfolio grid">
+            <h3>Portfolio:</h3>   
+            <ul id="stocks">
+            </ul>
+            <ul id="quantities">
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="../getStocks.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-import Stock as stk
+import stock as stk
 
 # startDate = datetime(2015,1,1)
 # endDate = datetime(2021,1,1)
