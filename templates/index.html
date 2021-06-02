@@ -9,19 +9,42 @@
 </head>
 <body>
     <div class="container">
-        <form id="stock-form">
+        {% if message %}
+            <p class="message">{{ message | safe}}</p>
+        {% endif %}
+        <form id="stock-form" action="/submit" method="POST">
             <h3>Please add stocks to the portfolio:</h3>
             <div id="add-stock">
-                <input id="ticker-input" type="text" name="stock" placeholder="Ticker symbol"/>
+                <input id="ticker-input" type="text" name="ticker" placeholder="Ticker symbol"/>
                 <input id="quantity-input" type="text" name="quantity" placeholder="Number of shares owned">
+                <select id="sector-input" name="sector">
+                    <option value="Placeholder">---Select sector---</option>
+                    <option value="Communication Services">Communication Services</option>
+                    <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                    <option value="Consumer Staples">Consumer Staples</option>
+                    <option value="Energy">Energy</option>
+                    <option value="Financials">Financials</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Industrials">Industrials</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Materials">Materials</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Other">Other</option>
+                </select>
                 <input type="submit" value="Add stock" class="btn"/>
             </div>
         </form>
-        <div id="portfolio grid">
+        <div id="portfolio-form">
             <h3>Portfolio:</h3>   
-            <ul id="stocks">
+            <ul id="stocks" name="stocks">
+                <li></li>
             </ul>
-            <ul id="quantities">
+            <ul id="quantities" name="quantities">
+                <li></li>
+            </ul>
+            <ul id='sectors' name="sectors">
+                <li></li>
             </ul>
         </div>
     </div>
