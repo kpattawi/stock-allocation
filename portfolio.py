@@ -43,4 +43,4 @@ allocation_by_sector = allocation_by_sector.sort_values(by=["allocation"],ascend
 print(allocation_by_sector.head(12))
 
 # Print out information about stock allocation and potential suggestions
-print(f"{allocation_by_sector[]}")
+# print(f"{allocation_by_sector[]}")

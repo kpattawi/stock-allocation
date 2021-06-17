@@ -5,37 +5,204 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/utilities.css">
     <title>Stock Allocation Tool</title>
 </head>
 <body>
-    <div class="container">
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container flex">
+            <h1 class="logo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="https://kpattawi.github.io/portfolio/templates/">My Website</a></li>
+                    <li><a href="https://kpattawi.github.io/portfolio/templates/about.html">About Me</a></li>
+                    <li><a href="https://kpattawi.github.io/portfolio/templates//projects.html">Other Projects</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container main-form">
         {% if message %}
-            <p class="message">{{ message | safe}}</p>
+                <p class="message">{{ message | safe}}</p>
         {% endif %}
+        <h1>Kaleb's Portfolio Allocation Tool</h1>
+        <h3>Please add stocks to the portfolio:</h3>
         <form id="stock-form" action="/submit" method="POST">
-            <h3>Please add stocks to the portfolio:</h3>
-            <div id="add-stock">
-                <input id="ticker-input" type="text" name="ticker" placeholder="Ticker symbol"/>
-                <input id="quantity-input" type="text" name="quantity" placeholder="Number of shares owned">
-                <select id="sector-input" name="sector">
-                    <option value="Placeholder">---Select sector---</option>
-                    <option value="Communication Services">Communication Services</option>
-                    <option value="Consumer Discrectionary">Consumer Discrectionary</option>
-                    <option value="Consumer Staples">Consumer Staples</option>
-                    <option value="Energy">Energy</option>
-                    <option value="Financials">Financials</option>
-                    <option value="Healthcare">Healthcare</option>
-                    <option value="Industrials">Industrials</option>
-                    <option value="Information Technology">Information Technology</option>
-                    <option value="Materials">Materials</option>
-                    <option value="Real Estate">Real Estate</option>
-                    <option value="Utilities">Utilities</option>
-                    <option value="Other">Other</option>
-                </select>
-                <input type="submit" value="Add stock" class="btn"/>
-            </div>
+            <input id="ticker-input1" type="text" name="ticker1" placeholder="Ticker symbol"/>
+            <input id="quantity-input1" type="text" name="quantity1" placeholder="# of shares owned">
+            <select id="sector-input1" name="sector1">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="ticker-input2" type="text" name="ticker2" placeholder="Ticker symbol"/>
+            <input id="quantity-input2" type="text" name="quantity2" placeholder="# of shares owned">
+            <select id="sector-input2" name="sector2">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="ticker-input3" type="text" name="ticker3" placeholder="Ticker symbol"/>
+            <input id="quantity-input3" type="text" name="quantity3" placeholder="# of shares owned">
+            <select id="sector-input3" name="sector3">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="ticker-input4" type="text" name="ticker4" placeholder="Ticker symbol"/>
+            <input id="quantity-input4" type="text" name="quantity4" placeholder="# of shares owned">
+            <select id="sector-input4" name="sector4">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="ticker-input5" type="text" name="ticker5" placeholder="Ticker symbol"/>
+            <input id="quantity-input5" type="text" name="quantity5" placeholder="# of shares owned">
+            <select id="sector-input5" name="sector5">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="ticker-input6" type="text" name="ticker6" placeholder="Ticker symbol"/>
+            <input id="quantity-input6" type="text" name="quantity6" placeholder="# of shares owned">
+            <select id="sector-input6" name="sector6">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="ticker-input7" type="text" name="ticker7" placeholder="Ticker symbol"/>
+            <input id="quantity-input7" type="text" name="quantity7" placeholder="# of shares owned">
+            <select id="sector-input7" name="sector7">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="ticker-input8" type="text" name="ticker8" placeholder="Ticker symbol"/>
+            <input id="quantity-input8" type="text" name="quantity8" placeholder="# of shares owned">
+            <select id="sector-input8" name="sector8">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="ticker-input9" type="text" name="ticker9" placeholder="Ticker symbol"/>
+            <input id="quantity-input9" type="text" name="quantity9" placeholder="# of shares owned">
+            <select id="sector-input9" name="sector9">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="ticker-input10" type="text" name="ticker10" placeholder="Ticker symbol"/>
+            <input id="quantity-input10" type="text" name="quantity10" placeholder="# of shares owned">
+            <select id="sector-input10" name="sector10">
+                <option value="Placeholder">---Select sector---</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Discrectionary">Consumer Discrectionary</option>
+                <option value="Consumer Staples">Consumer Staples</option>
+                <option value="Energy">Energy</option>
+                <option value="Financials">Financials</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Industrials">Industrials</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Materials">Materials</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="submit" value="Get information about your portfolio!" class="btn" id="final-btn"/>
         </form>
-        <div id="portfolio-form">
+        <!-- <div id="portfolio-form">
             <h3>Portfolio:</h3>   
             <ul id="stocks" name="stocks">
                 <li></li>
@@ -46,10 +213,10 @@
             <ul id='sectors' name="sectors">
                 <li></li>
             </ul>
-        </div>
+        </div> -->
     </div>
 
 
-    <script src="../getStocks.js"></script>
+    <!-- <script src="../getStocks.js"></script> -->
 </body>
 </html>

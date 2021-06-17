@@ -74,6 +74,7 @@ class Stock:
         return self.prices_adj_close
 
 
+
     # The class methods for the Stock class.
     @classmethod
     def get_allocations(cls):
@@ -83,3 +84,11 @@ class Stock:
         """
         cls.stocks_data_frame["allocation"] = cls.stocks_data_frame["current value"].apply(lambda x: x/cls.stocks_data_frame["current value"].sum())
 
+
+    @classmethod
+    def empty_portfolio(cls):
+        """
+        Class method that updates stocks_dataframe "Allocations" as a fraction, not a percent,
+        to the stocks_data_frame. Note that this does not get updated when new Stock objects are created, only when method is called.
+        """
+        Stock.stocks_data_frame = pd.DataFrame()

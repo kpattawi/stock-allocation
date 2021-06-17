@@ -5,24 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/utilities.css">
     <title>Your Portfolio Allocation</title>
 </head>
 <body>
-    <h1>Your Portfolio Allocation</h1>
-    <div id="stock-weights">
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container flex">
+            <h1 class="logo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Re-enter Stocks</a></li>
+                    <li><a href="https://kpattawi.github.io/portfolio/templates/">My Website</a></li>
+                    <li><a href="https://kpattawi.github.io/portfolio/templates/about.html">About Me</a></li>
+                    <li><a href="https://kpattawi.github.io/portfolio/templates//projects.html">Other Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Your Portfolio Allocation</h1>
+        <div id="stock-weights">
+            {% for table in tables %}
+                <table class="portfolio">    
+                    {{titles[loop.index]}}
+                    {{ table|safe }}
+                </table>
+            {% endfor %}
+
+        
+            <div>
+                <h3>{{ largest_ticker }} makes up the largest percent of your portfolio at {{ largest_allocation }}%.</h3>
+                <p>While it is okay to own a large position in a single stock, it is recommended to diversify your portfolio by owning many stocks. 25 stocks or more is a common suggestion.</p>
+            </div>
+            <div>
+                <h3>Based on the sectors that you assigned to each stock, here is the allocation of your portfolio by sector:</h3>
+
+                {% for sector in sectors %}
+                    <table class="portfolio">    
+                        {{sector_titles[loop.index]}}
+                        {{ sector|safe }}
+                    </table>
+                {% endfor %}
+
+                <p>As mentioned previously, it is not only recommended to be exposed to multiple stocks, but also a good idea to choose stocks from different sectors.  Owning less correlated stocks will reduce the variance of your portfolio.</p>
+            </div>
+        </div>
+
+        <!-- {% for quantity in quantities %}
+        <p class="message">{{ quantity | safe}}</p>
+        {% endfor %} -->
         <h3>Here are the weights of each of the stocks that you own:</h3>
-        <ul>
-            <li></li>
-        </ul>
-    </div>
-    <div id="sector-weights">
-        <h3>These are the percentages that each sector makes up in your portfolio:</h3>
-        <ul>
-            <li></li>
-        </ul>
-    </div>
-    <div id="suggestions">
-        <p></p>
-    </div>
+        
+    
     </body>
 </html>
