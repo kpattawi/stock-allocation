@@ -23,9 +23,10 @@
             </nav>
         </div>
     </div>
-    <div class="container">
+
+    <div class="container" id="stock-weights">
         <h1>Your Portfolio Allocation</h1>
-        <div id="stock-weights">
+        <div>
             {% for table in tables %}
                 <table class="portfolio">    
                     {{titles[loop.index]}}
@@ -35,6 +36,7 @@
 
         
             <div>
+                <p>Above is a table with information about the stocks you entered.  "annual mean" and "annual std" are the 10 year averages of annual mean and standard deviation of returns.</p>
                 <h3>{{ largest_ticker }} makes up the largest percent of your portfolio at {{ largest_allocation }}%.</h3>
                 <p>While it is okay to own a large position in a single stock, it is recommended to diversify your portfolio by owning many stocks. 25 stocks or more is a common suggestion.</p>
             </div>
@@ -55,7 +57,7 @@
         <!-- {% for quantity in quantities %}
         <p class="message">{{ quantity | safe}}</p>
         {% endfor %} -->
-        <h3>Here are the weights of each of the stocks that you own:</h3>
+        <!-- <h3>Here are the weights of each of the stocks that you own:</h3> -->
         
     
     </body>

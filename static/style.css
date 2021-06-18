@@ -49,6 +49,18 @@ code, pre {
     color: #fff;
     padding: 10px;
 }
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+th, td{
+    padding: 12px;
+    text-align: center;
+}
 
 /* Navbar */
 .navbar{
@@ -77,7 +89,7 @@ code, pre {
     font-weight: bold;
 }
 
-
+/* Stock Weights */
 
 /* Main-Form */
 .main-form{

@@ -10,10 +10,6 @@ lxml = "*"
 requests = "*"
 pandas-datareader = "*"
 flask = "*"
-psycopg2 = "*"
-psycopg2-binary = "*"
-flask-sqlalchemy = "*"
-gunicorn = "*"
 
 [dev-packages]
 

@@ -14,7 +14,7 @@ class Stock:
 
     stocks_data_frame = pd.DataFrame()
 
-    def __init__(self, ticker, quantity, sector):
+    def __init__(self, ticker, quantity, sector=None):
         """
         Method adds stock information (ticker, quantity, current price, current value) 
         to pandas dataframe with ticker as the index.
